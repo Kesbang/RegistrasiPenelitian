@@ -91,3 +91,12 @@ function UploadFile() {
     };
     reader.readAsDataURL(file);
 }
+// Tampilkan popup saat halaman dibuka
+window.addEventListener('DOMContentLoaded', () => {
+    document.getElementById('popupModal').style.display = 'flex';
+});
+
+function closePopup() {
+    document.getElementById('popupModal').style.display = 'none';
+}
+
