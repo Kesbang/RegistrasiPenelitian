@@ -10,16 +10,25 @@
 </head>
 <body>
     <header class="header">
-        <img src="src/logo_kesbangpol.png" alt="Logo Kesbangpol" class="logo-left">
-        <img src="src/logo_berAKHLAK.png" alt="Logo BerAKHLAK" class="logo-right">
-    </header>    
+  <div class="header-left">
+        <img src="src/LOGO.png" alt="Logo Kesbangpol" class="logo-left">
+    <div class="header-title">
+      <p class="instansi-text">
+        Badan Kesatuan Bangsa<br>dan Politik Kabupaten Kudus
+      </p>
+    </div>
+  </div>
+
+  <img src="src/logo_berAKHLAK.png" alt="Logo BerAKHLAK" class="logo-right">
+</header>
+   
     <div class="container">
         <div class="title">Formulir Registrasi Penelitian</div>
         <div class="content">
             <form id="uploadForm" action="https://script.google.com/macros/s/AKfycbwgtNkOvFiIL4L8daSVX_OEJNbzt_7JPO-ypAXMxpA3ebOpUYtIGtjNE7visSI9bLuL/exec" method="POST">
                 <input type="hidden" name="fileContent" id="fileContent">
                 <input type="hidden" name="filename" id="filename">
-                <div><h5>Di Mohon Saat Mengisi Form, Setiap Awal Kata di Menggunakan Huruf Kapital, Terima Kasih.</h5></div>
+                <div><h5>Di Mohon Saat Mengisi Form, Setiap Awal Kata/Teks Menggunakan Huruf Kapital, Terima Kasih.</h5></div>
                 <div class="user-details">
                     <div class="input-box">
                         <label for="atasnama" class="form-label">Memperhatikan Jabatan Penanggung Jawab (Contoh: Wakil Dekan 1)</label>
@@ -220,6 +229,20 @@
 <script src="script.js" defer></script>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+<!-- Popup Modal Logo -->
+<div id="popupModal" class="popup-modal">
+  <div class="popup-content">
+    <img src="src/NEW_LOGO.jpg" alt="Logo Baru" class="popup-image">
+    <p style="margin-top: 10px; margin-bottom: 15px; font-weight: 500; font-size: 16px;">
+      Di Mohon Saat Mengisi Form, Setiap Awal Kata/Teks Menggunakan Huruf Kapital, Terima Kasih.
+    </p>
+    <button class="popup-ok" onclick="closePopup()">TUTUP</button>
+  </div>
+</div>
+<footer style="text-align: center; padding: 15px; font-size: 14px; color: #777;">
+  &copy; 2025 Badan Kesatuan Bangsa dan Politik Kabupaten Kudus. Seluruh hak cipta dilindungi undang-undang.<br>
+  Dikembangkan oleh Dimas Wahyu Damar Panuluh – Teknik Informatika, Universitas Muria Kudus.
+</footer>
 
 </body>
 </html>
