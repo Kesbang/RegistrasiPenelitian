@@ -302,3 +302,96 @@ body {
     padding: 8px 12px;
   }
 }
+.popup-modal {
+  position: fixed;
+  z-index: 2000;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.popup-content {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  animation: fadeIn 0.5s ease;
+  max-width: 90%;
+  width: 400px;
+}
+
+.popup-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.popup-ok {
+  padding: 10px 25px;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 500;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.popup-ok:hover {
+  background-color: #2980b9;
+  transform: translateY(-2px);
+}
+@media (max-width: 480px) {
+  .popup-content {
+    width: 90%;
+    padding: 15px;
+  }
+
+  .popup-ok {
+    width: 100%;
+    font-size: 15px;
+  }
+
+  .popup-content p {
+    font-size: 14px;
+  }
+}
+.header-left {
+  display: flex;
+  align-items: center;
+}
+
+.header-title {
+  margin-left: 10px; /* jarak nempel logo kiri */
+}
+
+.instansi-text {
+  color: white;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.2;
+  margin: 0;
+  letter-spacing: -0.5px; /* agar lebih rapat */
+}
+@media (max-width: 576px) {
+  .instansi-text {
+    font-size: 12px;
+    text-align: left;
+  }
+}
+
+footer {
+  background-color: #f8f9fa;
+  margin-top: 40px;
+  padding: 20px;
+  font-size: 14px;
+  color: #555;
+  border-top: 1px solid #ddd;
+}
