@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Service Suspended</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+body {
+    margin: 0;
+    font-family: "Courier New", monospace;
+    background-color: #0d1117;
+    color: #c9d1d9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    background: #161b22;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(255,0,0,0.2);
+    width: 600px;
+    max-width: 95%;
+}
+
+h1 {
+    color: #ff4d4d;
+    margin-top: 0;
+}
+
+.status {
+    color: #ff4d4d;
+    font-weight: bold;
+}
+
+.info {
+    margin-top: 20px;
+    line-height: 1.6;
+    font-size: 14px;
+}
+
+.timestamp {
+    margin-top: 30px;
+    font-size: 13px;
+    color: #8b949e;
+    border-top: 1px solid #30363d;
+    padding-top: 15px;
+}
+
+.code {
+    color: #58a6ff;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+    <h1>503 Service Temporarily Suspended</h1>
+
+    <p class="status">Account Status: SUSPENDED</p>
+
+    <div class="info">
+        This hosting account has been temporarily suspended due to 
+        <span class="code">outstanding billing obligations</span>.
+
+        <br><br>
+
+        Access to this service has been restricted by the hosting provider.
+        <br>
+        Please contact the account administrator to restore access.
+
+        <br><br>
+
+        Reference Code: <span class="code">ERR-ACC-2026-02</span>
+    </div>
+
+    <div class="timestamp">
+        Server Time: <span id="timestamp"></span>
+        <br>
+        Server Location: Indonesia (WIB / GMT+7)
+    </div>
+</div>
+
+<script>
+function updateTime() {
+  const now = new Date();
+
+  const utc = now.getTime() + (now.getTimezoneOffset() * 60000);
+  const wib = new Date(utc + (7 * 60 * 60 * 1000));
+
+  const formatted = wib.getFullYear() + "-" +
+    String(wib.getMonth()+1).padStart(2,'0') + "-" +
+    String(wib.getDate()).padStart(2,'0') + " " +
+    String(wib.getHours()).padStart(2,'0') + ":" +
+    String(wib.getMinutes()).padStart(2,'0') + ":" +
+    String(wib.getSeconds()).padStart(2,'0') +
+    " WIB (GMT+7)";
+
+  document.getElementById("timestamp").innerText = formatted;
+}
+
+setInterval(updateTime, 1000);
+updateTime();
+</script>
+
+</body>
+</html>
